@@ -41,7 +41,7 @@ Feature: Crud para crear Usuario
       status: "active"
     }
     """
-  @Regresion @Smock @PostUserDinamic
+  @Regresion @ @PostUserDinamic
   Scenario: Crear Usuario Nuevo usando FakeData
     * def emailFake = dataGenerator.getEmailRandom()
     * def nameFake = dataGenerator.getRandonName()
