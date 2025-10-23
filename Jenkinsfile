@@ -26,11 +26,12 @@ pipeline {
             steps {
                 echo 'Publicando reporte HTML de Karate...'
                 publishHTML([
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
                     reportDir: 'target/karate-reports',
                     reportFiles: 'karate-summary.html',
-                    reportName: 'Reporte de Pruebas Karate',
-                    keepAll: true,
-                    alwaysLinkToLastBuild: true
+                    reportName: 'Reporte de Pruebas Karate'
                 ])
             }
         }
